@@ -302,6 +302,7 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
         'GET',
         `${url}/place/details/json?` +
           Qs.stringify({
+            fields:props.fields,
             key: props.query.key,
             placeid: rowData.place_id,
             language: props.query.language,
